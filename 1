@@ -1,0 +1,982 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPycu08dxUD7KeJCPbWy9e8",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/axox111/firstone/blob/main/1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ucAQ_GRSaj-M",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "94a82ace-9f59-4380-b577-d7327bc12bd4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 число -  2.99\n",
+            "2 число -  10.79\n",
+            "сумма -  13.78\n",
+            "разность - -7.8\n",
+            "произведение  32.26\n"
+          ]
+        }
+      ],
+      "source": [
+        "#1 Даны два дейсвительных числа а и б. получить их \n",
+        "#сумму, разность и произведение\n",
+        "import random\n",
+        "\n",
+        "a = round(random.uniform (-5, 10 + 1), 2)\n",
+        "b = round(random.uniform (-5, 10 + 1), 2)\n",
+        "print(\"1 число - \", a)\n",
+        "print(\"2 число - \", b)\n",
+        "print(\"сумма - \", round(a + b,2 ))\n",
+        "print(\"разность -\", round(a - b, 2))\n",
+        "print(\"произведение \",  round(a * b, 2))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2 даны дейсвительные числа х и у. получить (|x|-|y|)/(1+|xy|)\n",
+        "import random\n",
+        "\n",
+        "x = round(random.uniform (-5, 10 + 1), 2)\n",
+        "y = round(random.uniform (-5, 10 + 1), 2)\n",
+        "print(\"1 - \", x)\n",
+        "print(\"2 - \", y)\n",
+        "print(\"result:\",round((abs(x) - abs(y)) / (1 + abs(x *y)), 2))"
+      ],
+      "metadata": {
+        "id": "0oWa3iKOcKrW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a66778f2-8839-42a1-8d08-8a7d827b465a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 -  7.17\n",
+            "2 -  6.9\n",
+            "result: 0.01\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3 дана длина ребра куба. найти объем куба и площадь его боковой поверхности\n",
+        "import random\n",
+        "\n",
+        "a = random.randrange(1, 10 + 1)\n",
+        "print(\"сторона куба -\", a)\n",
+        "print(\"объем куба - \", a ** 3)\n",
+        "print(\"пощадь боковой поверхности - \", a ** 2)"
+      ],
+      "metadata": {
+        "id": "XEy_K3QSf-0Q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4823ef02-3ebf-4685-bd27-cac0a11c260f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "сторона куба - 8\n",
+            "объем куба -  512\n",
+            "пощадь боковой поверхности -  64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4 даны два дейсвительных положительных числа. найти среднее арифметическое \n",
+        "#и среднее геометрическое этих чисел\n",
+        "import random\n",
+        "\n",
+        "a = round(random.uniform(1, 10 + 1), 2)\n",
+        "b = round(random.uniform(1, 10 + 1), 2)\n",
+        "print(a , b)\n",
+        "print(\"среднее арифметическое - \", (a + b) / 2)\n",
+        "print(\"среднее геометрическое - \", (a * b) ** (1 / 2))"
+      ],
+      "metadata": {
+        "id": "3VEsppash2ah",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e457bd9e-3e81-494e-ba15-2e171ab39604"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3.99 8.12\n",
+            "среднее арифметическое -  6.055\n",
+            "среднее геометрическое -  5.691994378071715\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5 даны два дейсвительных числа. найти среднее арифметическое этих чисел\n",
+        "#и среднее геометрическое их модулей\n",
+        "import random\n",
+        "a = round(random.uniform(-5, 10 + 1), 2)\n",
+        "b = round(random.uniform(-5, 10 + 1), 2)\n",
+        "print(a, b)\n",
+        "print(\"среднее арифметическое - \", (a + b) / 2)\n",
+        "print(\"среднее арифметическое модулей - \", (abs(a) + abs(b)) / 2)"
+      ],
+      "metadata": {
+        "id": "InXnRSVvjX-a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cd2ad2d9-c87d-489e-f351-2fe60a5cf850"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.3 -1.67\n",
+            "среднее арифметическое -  -0.18499999999999994\n",
+            "среднее арифметическое модулей -  1.4849999999999999\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6 даны катеты прямоугольного треугольника. найти его гипотенузу и площадь\n",
+        "import random\n",
+        "\n",
+        "a = random.randrange(1, 10 + 1)\n",
+        "b = random.randrange(1, 10 + 1)\n",
+        "c = (a ** 2 + b ** 2) ** (1 / 2)\n",
+        "print(\"катет1 - \", a)\n",
+        "print(\"катет2 - \", b)\n",
+        "print(\"гипотенуза - \", c)\n",
+        "h = (a * b) / c\n",
+        "S = (c * h) / 2\n",
+        "print(\"площадь прямоугольного треугольника - \", S)"
+      ],
+      "metadata": {
+        "id": "OWpKm8kdlR6S",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "597b5995-0a21-463b-9faf-0eada0508d5e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "катет1 -  2\n",
+            "катет2 -  3\n",
+            "гипотенуза -  3.605551275463989\n",
+            "площадь прямоугольного треугольника -  3.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7 смешано v1 литров воды температуры t1 с v2 литрами воды температуры t2.\n",
+        "#найти объем и температуру образовавшейся смеси\n",
+        "import random\n",
+        "\n",
+        "v1 = random.randrange(2, 10 + 1)\n",
+        "t1 = random.randrange(15, 80 + 1)\n",
+        "v2 = random.randrange(2, 10 + 1)\n",
+        "t2 = random.randrange(15, 80 + 1)\n",
+        "print(\"вода1 -\", v1, \", температура воды - \", t1)\n",
+        "print(\"вода2 -\", v2, \", температура воды - \", t2)\n",
+        "V = v1 + v2\n",
+        "T = (v1 * t1 + v2 * t2) / V\n",
+        "print(\"объем смеси - \", V)\n",
+        "print(\"температура смеси - \", T)"
+      ],
+      "metadata": {
+        "id": "ZNpFGXtKmNdc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bb06fc17-c490-4cbb-fa95-e47cb06f8abf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "вода1 - 4 , температура воды -  17\n",
+            "вода2 - 3 , температура воды -  38\n",
+            "объем смеси -  7\n",
+            "температура смеси -  26.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8 определить периметр правильного n-угольника, \n",
+        "#описанного около окружности радиуса r\n",
+        "import random \n",
+        "import math\n",
+        "\n",
+        "n = random.randrange(3, 5 + 1)\n",
+        "r = random.randrange(10, 40 + 1)\n",
+        "print(n, \"-угольник, описаный около окружности с радиусом\", r)\n",
+        "#как убрать пробел после переменной\n",
+        "a = 2 * r * math.sin(math.radians(180) / n)\n",
+        "P = n * a\n",
+        "print(\"периметр равен \", P)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2-boaOcZsVzu",
+        "outputId": "322416c6-df64-4adc-c95b-6f1554a980d4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3 -угольник, описаный около окружности с радиусом 32\n",
+            "периметр равен  166.27687752661222\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9 три сопротивления R1 R2 R3 соединены паралельно. \n",
+        "#Найти сопротивление соединения\n",
+        "R1 = 9\n",
+        "R2 = 67\n",
+        "R3 = 82\n",
+        "R = 1 / (1 / R1 + 1 / R2 + 1 / R3)\n",
+        "print(R)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yavfut7YAywG",
+        "outputId": "60edb14d-12c7-4264-d855-3c66b53ebaf5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7.234235552304316\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10 определить время падения камня на поверхность земли с высоты h\n",
+        "import random\n",
+        "\n",
+        "h = random.randrange(10, 100 + 1)\n",
+        "g = 9.80665\n",
+        "t = ((2 * h) /  g) ** (1 / 2)\n",
+        "print(\"высота - \", h)\n",
+        "print(\"время падени - \", round(t, 2), \"сек.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9w34YShEDRzr",
+        "outputId": "03a92a49-5579-4f46-e325-48b7b80a2fc5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "высота -  76\n",
+            "время падени -  3.94 сек.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ёмаё чё умею, завтра получше повникаю\n",
+        "def f(x, y):\n",
+        "  return x ** (1 / y)"
+      ],
+      "metadata": {
+        "id": "lqviOaBDlFUb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#11 даны х у z, вычислить а, б если \n",
+        "#(примеры скину картинкой в дискорде. надеюсь, вы не против)\n",
+        "#а)\n",
+        "import math\n",
+        "\n",
+        "x = int(input (\"x:\"))\n",
+        "y = int(input (\"y:\"))\n",
+        "z = int(input (\"z:\"))\n",
+        "aa = (f(abs(x - 1), 2) - f(abs(y), 3)) / ( 1 + (x ** 2 /2 ) + y ** 2 /4)\n",
+        "ab = x * (math.atan(z) + math.e ** (-1 * (x + 3)))\n",
+        "print(\"aa - \", aa)\n",
+        "print(\"ab - \", ab)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9F-SR5yRGeeR",
+        "outputId": "dd5e3199-91f8-4b8d-a93b-ce0f1983fa66"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x:2\n",
+            "y:4\n",
+            "z:6\n",
+            "aa -  -0.08391443599545705\n",
+            "ab -  4.448756804916504\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#б)\n",
+        "ba = (3 + math.e ** (y - 1)) / (1 + x ** 2 * abs(y - math.tan(z)))\n",
+        "bb = 1 + abs(y - x) + (((y - x) ** 2) / 2) + ((abs(y - x) ** 3) / 3)\n",
+        "print(\"бa - \", ba)\n",
+        "print(\"бb - \", bb)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PCxbJfXxK-hV",
+        "outputId": "20a8f9e3-47f1-4349-c6a7-3d66a08364f7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ba -  1.270948328973093\n",
+            "bb -  7.666666666666666\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#в) sin ** 2 (x) = (1 - math.cos(2 * x)) / 2\n",
+        "va = (1 + y) * ((x + y / (x ** 2 + 4)) / (math.e ** (-1 * x - 2) + 1 / (x ** 2 + 4)))\n",
+        "vb = (1 + math.cos(y - 2)) / (x ** 4 / 2 + ((1 - math.cos(2 * z)) / 2))\n",
+        "print(\"вa - \", va)\n",
+        "print(\"вb - \", vb)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ATHDAAkoL__g",
+        "outputId": "5b1b99f0-19e9-486a-c315-3b934b1410c5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "va -  87.2200696094626\n",
+            "vb -  0.07227629187821481\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#г tg ** 2 (a) = (1 - cos(2 * a)) / (1 + cos(2 * a))\n",
+        "ga = y + (x / (y ** 2 + (abs(x ** 2 / (y + x ** 3 / 3)))))\n",
+        "gb = (1 + ((1 - math.cos(2 * z / 2)) / (1 + math.cos(2 * z / 2))))\n",
+        "print(\"га - \", ga)\n",
+        "print(\"гb - \", gb)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YhrLW-6LV-GF",
+        "outputId": "d34cb26e-5f69-4fcf-a95b-8a12917db0b7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "га 4.120481927710843\n",
+            "гb 1.020319516942427\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#д\n",
+        "da = (2 * math.cos(x - math.pi / 6)) / (1 / 2 + (1 - math.cos(2 * y) / 2))\n",
+        "db = 1 + (z ** 2 / (3 + z ** 2 / 5))\n",
+        "print(\"да - \", da)\n",
+        "print(\"дb - \", db)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j5sr1ugNZrBS",
+        "outputId": "b4810834-8dcb-4420-c3a8-18911db9396a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "да 0.11986009250727582\n",
+            "дb 4.529411764705882\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#e cos ** 2 (x) = ((1 + cos(2 * x)) / 2)\n",
+        "ea = ((1 + ((1 - math.cos(2 * (x + y))) / 2)) / (2 + abs(x - 2 * x / (1 + x ** 2 * y ** 2)))) + x\n",
+        "eb = (1 + math.cos(2 * math.atan(1 / z))) / 2\n",
+        "print(\"ea - \", ea)\n",
+        "print(\"eb - \", eb)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sWHmz4HkbN78",
+        "outputId": "4dfa4682-4d0c-428d-dfe9-e4c754d98d4a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ea -  2.273729477895289\n",
+            "eb -  0.972972972972973\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ж\n",
+        "ja = math.log(abs((y - f(abs(x), 2)) * (x - (y / (z + x ** 2 / 4)))))\n",
+        "jb = x - (x **2 / math.factorial(3)) + (x ** 5 / math.factorial(5))\n",
+        "print(\"жa - \", ja)\n",
+        "print(\"жb - \", jb)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VfPk28vsdeLQ",
+        "outputId": "ff09ab04-8783-4a4e-e41d-05636a6a8a1e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "жa -  1.3067046368204924\n",
+            "жb -  1.6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#12. дана сторона равностороннего треугольника. найти площадь этого треугольника\n",
+        "a = int(input (\"x:\"))\n",
+        "s = (3 / 4 * a) ** (1 / 2)\n",
+        "print(\"площадь треугольника - \", s ,\"см^2\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vjw8GvFBi3Yv",
+        "outputId": "37cfac7a-ffb5-41fd-d9d6-fefe2eae95ed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x:5\n",
+            "площадь треугольника -  1.9364916731037085 см^2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#13.вычислите период колебания маятника длины l\n",
+        "import math\n",
+        "\n",
+        "l = int(input (\"l: \"))\n",
+        "g = 9.80665\n",
+        "T = 2 * math.pi * (l / g) ** (1 / 2)\n",
+        "print(\"период колебания матяника = \", round(T, 2), \"сек.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TkdlWDEKj4bY",
+        "outputId": "90c1cffb-5149-4c74-98de-7b1524200b47"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "l: 9\n",
+            "период колебания матяника =  6.02 сек.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#14. определите силу притяжения F между двумя телами массы m1 и m2,\n",
+        "#находящимися на расстоянии r друг от друга\n",
+        "m1 = int(input(\"масса 1 = \"))\n",
+        "m2 = int(input(\"масса 2 = \"))\n",
+        "r = int(input(\"расстояние между объектами = \"))\n",
+        "G = 6.67\n",
+        "F = G * ((m1 * m2) / r **2)\n",
+        "print(\"сила притяжения = \", F)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IJBdoFtyl21a",
+        "outputId": "b34126e1-33bf-4b1b-b2e3-90671cd84cc9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "масса 1 = 1000000\n",
+            "масса 2 = 100\n",
+            "расстояние между объектами = 1000000\n",
+            "сила притяжения =  0.0006670000000000001\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#15. даны гипотенуза и катет прямоугольного треугольника\n",
+        "#Найти второй катет и радиус вписанной окружности\n",
+        "a = int(input(\"гипотенуза = \"))\n",
+        "b = int(input(\"катет1 = \"))\n",
+        "c1 = a ** 2 - b ** 2\n",
+        "c = c1 ** (1 / 2)\n",
+        "r = (c + b - a) / 2\n",
+        "print(\"катет2 = \", c)\n",
+        "print(\"радиус вписанной окружности = \", r)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nDu1T04qo98N",
+        "outputId": "d51a47db-fff1-41f4-a197-76d492c39cde"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "гипотенуза = 200\n",
+            "катет1 = 15\n",
+            "катет2 =  199.43670675179132\n",
+            "радиус вписанной окружности =  7.21835337589566\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#16. Известная длина окружности.\n",
+        "#найти площадь круга, ограниченного этой окружностью\n",
+        "import math\n",
+        "\n",
+        "l = int(input(\"длинна окружности = \"))\n",
+        "S = l ** 2 / (4 * math.pi)\n",
+        "print(\"площадь круга =\", S) "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vj5QNPzuqNri",
+        "outputId": "a9d2c1e0-bba7-47f6-e861-3bffe9cc201b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "длинна окружности = 20\n",
+            "площадь круга = 31.830988618379067\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#17. найти плошадь кольца, внутренний радиус которого равен 20,\n",
+        "#а внешний - заданному числу r (r > 20)\n",
+        "import math\n",
+        "\n",
+        "inr = 20\n",
+        "print(\"внутренний радиус = 20\")\n",
+        "outr = int(input(\"внешний радиус = \"))\n",
+        "if outr <= inr:\n",
+        "  print(\"внешний радиус должен быть больше внутреннего\")\n",
+        "else:\n",
+        "  S = math.pi * (outr ** 2 - inr ** 2)\n",
+        "  print(\"плошадь кольца = \", S)\n",
+        "#а можно сделать, что бы каждый код был независим от предыдущих? "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jLh6dXvJtfWk",
+        "outputId": "df0f5505-66ad-427b-df6d-8cdf487910e4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "внутренний радиус = 20\n",
+            "внешний радиус = 21\n",
+            "плошадь кольца =  128.8052987971815\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#33. даны действительные числа х, у. получить:\n",
+        "#max (x, y)\n",
+        "import random\n",
+        "\n",
+        "x = round(random.uniform(-100, 100 + 1), 2)\n",
+        "y = round(random.uniform(-100, 100 + 1), 2)\n",
+        "z = round(random.uniform(-100, 100 + 1), 2)\n",
+        "print(\"а) x=\", x, \"y=\", y)\n",
+        "if x > y:\n",
+        "  print(\"x больше\")\n",
+        "else:\n",
+        "  print(\"y больше\")\n",
+        "\n",
+        "#min (x, y)\n",
+        "print(\"б) x=\", x, \"y=\", y)\n",
+        "if x > y:\n",
+        "  print(\"y меньше\")\n",
+        "else:\n",
+        "  print(\"х меньше\")\n",
+        "  \n",
+        "#max, min (x, y)\n",
+        "print(\"с) x=\", x, \"y=\", y)\n",
+        "if x > y:\n",
+        "  print(\"x больше, у меньше\")\n",
+        "else:\n",
+        "  print(\"y больше, х меньше\")"
+      ],
+      "metadata": {
+        "id": "4bjuEEhRvJGN",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "db76a13c-5bed-46b0-ba63-179f2eeb652b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "а) x= 23.52 y= -4.26\n",
+            "x больше\n",
+            "б) x= 23.52 y= -4.26\n",
+            "y меньше\n",
+            "с) x= 23.52 y= -4.26\n",
+            "x больше, у меньше\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#34. #33. даны действительные числа х, у, z. получить:\n",
+        "#max\n",
+        "x = round(random.uniform(-50, 50 + 1), 2)\n",
+        "y = round(random.uniform(-50, 50 + 1), 2)\n",
+        "z = round(random.uniform(-50, 50 + 1), 2)\n",
+        "print(\"а) х = \", x, \"y = \", y, \"z =\", z)\n",
+        "if x > y and x > z:\n",
+        "  print(\"х найбольшее число\")\n",
+        "elif y > x and y > z:\n",
+        "  print(\"у найбольшее число\")\n",
+        "else:\n",
+        "  print(\"z найбольшее число\")\n",
+        "\n",
+        "#minmax\n",
+        "x = round(random.uniform(-50, 50 + 1), 2)\n",
+        "y = round(random.uniform(-50, 50 + 1), 2)\n",
+        "z = round(random.uniform(-50, 50 + 1), 2)\n",
+        "if x > y > z:\n",
+        "  print(\"x найбольшее, z найменьшее\")\n",
+        "elif x > z > y:\n",
+        "  print(\"x найбольшее, y найменьшее\")\n",
+        "elif y > z > x:\n",
+        "  print(\"y найбольшее, x найменьшее\")\n",
+        "elif y > x > z:\n",
+        "  print(\"y найбольшее, z найменьшее\")\n",
+        "elif z > y > x:\n",
+        "  print(\"z найбольшее, x найменьшее\")\n",
+        "elif z > x > y:\n",
+        "  print(\"z найбольшее, y найменьшее\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4KlUSBqhoc2j",
+        "outputId": "d265cb40-4b44-414c-f4c0-806ff301ab7c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "а) х =  44.15 y =  20.18 z = 16.89\n",
+            "х найбольшее число\n",
+            "а) х =  20.43 y =  -46.46 z = -41.38\n",
+            "x найбольшее, y найменьшее\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#36 даны дейсвительные числа а, b, c. проверить, выполняются ли неравенства a < b < c\n",
+        "a = round(random.uniform(-20, 20 + 1), 2)\n",
+        "b = round(random.uniform(-20, 20 + 1), 2)\n",
+        "c = round(random.uniform(-20, 20 + 1), 2)\n",
+        "print(\"a = \", a, \"b = \", b, \"c =\", c)\n",
+        "if a < b < c:\n",
+        "  print(\"неравенства a < b < c выполняется\")\n",
+        "else:\n",
+        "  print(\"неравенства a < b < c не выполняется\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oifaCQu6q6Mp",
+        "outputId": "ba20060f-967b-472a-8774-adaccdc4ae34"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a =  -8.32 b =  -2.66 c = 4.38\n",
+            "неравенства a < b < c выполняется\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#37 Даны действительные числа а, b, с. Удвоить эти числа,\n",
+        "#если и заменить их абсолютными значениями, если это не так.\n",
+        "a = round(random.uniform(-10, 10 + 1), 2)\n",
+        "b = round(random.uniform(-10, 10 + 1), 2)\n",
+        "c = round(random.uniform(-10, 10 + 1), 2)\n",
+        "print(\"a = \", a, \"b = \", b, \"c =\", c)\n",
+        "if a >= b >= c:\n",
+        "  print(\"a = \", a * 2, \"b = \", b * 2, \"c =\", c * 2)\n",
+        "else:\n",
+        "  print(\"a = \", abs(a), \"b = \", abs(b), \"c =\", abs(c))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cvl2MqrFrr56",
+        "outputId": "6d84bdba-9ff6-4da4-a0f3-c4bda6bd627a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a =  10.35 b =  6.73 c = 3.02\n",
+            "a =  20.7 b =  13.46 c = 6.04\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#39. Даны два действительных числа.\n",
+        "#Вывести первое число, если оно больше второго,\n",
+        "#и оба числа, если этоне так\n",
+        "x = round(random.uniform(-100, 100 + 1), 2)\n",
+        "y = round(random.uniform(-100, 100 + 1), 2)\n",
+        "print(\"1 число =\", x,\"2 число =\", y)\n",
+        "if x > y:\n",
+        "  print(\"первое больше, так шо\", x)\n",
+        "else:\n",
+        "  print(\"второе больше, так шо держите оба - \",x ,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vm75q0eGs9my",
+        "outputId": "b0f6f818-5dea-4763-aa27-2da067b1bbcc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 число = -47.3 2 число = -72.59\n",
+            "первое больше, так шо -47.3\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
